@@ -5,16 +5,16 @@ import { Ionicons } from '@expo/vector-icons';
 import Menu from '../components/Menu';
 
 
-export default function Main() {
+export default function Main({navigation}) {
 
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.header}>
-        <Ionicons style={styles.setting} name="ios-settings-sharp" size={30} color="black" />
+        <Ionicons style={styles.setting} name="ios-settings-sharp" size={30} color="black" onPress={() => navigation.navigate('Setting')} />
       </View>
       <View style={styles.title}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Camera')}>
             <Text style={styles.buttonText}>시작</Text>
         </TouchableOpacity>
       </View>
@@ -55,6 +55,8 @@ const styles = StyleSheet.create({
     width: '45%',
     height: '25%',
     borderRadius: "100%",
+    borderWidth: 5,
+    borderBlockColor:"bleack",
   },
   buttonText: {
     fontSize: 60,

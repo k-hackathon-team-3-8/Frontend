@@ -1,29 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {Component} from 'react';
-import { StyleSheet, View, Text,TouchableOpacity, Alert } from 'react-native';
+import { StyleSheet, View, Text, TextInput} from 'react-native';
 import MyButton from '../components/MyButton';
 
 
-export default function LogIn() {
-    const handleButtonPress = () => {
-        Alert.alert("페이지 이동!");
-      };
-    
+export default function LogIn({navigation}) {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-
-      <View style={styles.header}>
-        <Text style={styles.headerText}>로그인</Text>
-      </View>
-
       <View style={styles.title}>
-
-      </View>
-      
-      <View style={styles.footer}>
-        <MyButton text="Log In" onPress={handleButtonPress} />
-        <Text style={styles.footerText}>Forgot your password?</Text>
+        <View style={styles.form}>
+          <TextInput style={styles.textForm} placeholder={'Id'} />
+          <TextInput style={styles.textForm} placeholder={'Password'} />
+        </View>
+        <View style={styles.btn}>
+          <MyButton text="Log In" onPress={() => navigation.navigate('Home')} />
+          <Text style={styles.btnText}>Forgot your password?</Text>
+        </View>
       </View>
     </View>
   );
@@ -34,28 +27,30 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor:"#fff",
   },
-  header: {
-    flex: 1,
-    alignItems:"center",
-    justifyContent: "center",
-    backgroundColor:"green",
-  },
   title: {
-    flex: 3,
+    flex: 0.5,
     alignItems:"center",
     justifyContent: "center",
   },
-  footer: {
-    flex: 2,
+  btn: {
+    flex: 0.5,
     justifyContent: "flex-end",
     alignItems:"center",
-    marginBottom: 40,
   },
-  headerText: {
-    fontSize: 60,
-    fontWeight: "bold",
+  form: {
+    justifyContent: "center",
+    alignItems:"center",
   },
-  footerText: {
+  btnText: {
     color:"#71a4d9",
+  },
+  textForm: {
+    backgroundColor:"#F2F2F2",
+    width: 350,
+    height: 45,
+    borderRadius: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginBottom: 10,
   },
 });

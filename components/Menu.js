@@ -10,14 +10,22 @@ export default function Menu() {
 
   return (
     <View style={styles.container}>
+      
         <TouchableOpacity onPress={handleButtonPress}>
-            <AntDesign name="home" size={30} color="black" />
+          <View style={styles.btn}>
+            <AntDesign name="home" size={25} color="black" />
             <Text style={styles.buttonText}>home</Text>
+          </View>
         </TouchableOpacity>
+      
+      
         <TouchableOpacity onPress={handleButtonPress}>
-            <Ionicons name="md-person-outline" size={30} color="black" />
+          <View style={styles.btn}>
+            <Ionicons name="md-person-outline" size={25} color="black" />
             <Text style={styles.buttonText}>profile</Text>
+          </View>
         </TouchableOpacity>
+      
     </View>
   );
 };
@@ -29,5 +37,9 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontWeight: "bold",
+  },
+  btn: {
+    justifyContent: "center",
+    alignItems:"center",
   },
 });
