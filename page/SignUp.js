@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   headerText: {
-    fontSize: "60",
+    fontSize: 60,
     fontWeight: "bold",
   },
 });
