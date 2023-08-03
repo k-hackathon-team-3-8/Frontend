@@ -15,7 +15,7 @@ export default function SignUp({navigation}) {
           <TextInput style={styles.textForm} placeholder={'Password'} />
         </View>
         <View style={styles.btn}>
-          <MyButton text="Sign Up" onPress={() => navigation.navigate('LogIn')} />
+          <MyButton text="Sign Up" onPress={() => navigation.navigate('로그인')} />
         </View>
       </View>
     </View>

@@ -11,7 +11,7 @@ export default function Main({navigation}) {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.header}>
-        <Ionicons style={styles.setting} name="ios-settings-sharp" size={30} color="black" onPress={() => navigation.navigate('Setting')} />
+        <Ionicons style={styles.setting} name="ios-settings-sharp" size={30} color="black" onPress={() => navigation.navigate('설정')} />
       </View>
       <View style={styles.title}>
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Camera')}>
@@ -55,8 +55,8 @@ const styles = StyleSheet.create({
     width: '45%',
     height: '25%',
     borderRadius: "100%",
-    borderWidth: 5,
-    borderBlockColor:"bleack",
+    borderWidth: 2,
+    borderBlockColor:"black",
   },
   buttonText: {
     fontSize: 60,

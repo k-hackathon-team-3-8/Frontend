@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    backgroundColor:"blue",
   },
   button: {
     backgroundColor: "#71a4d9",

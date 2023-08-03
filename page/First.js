@@ -15,8 +15,8 @@ export default function First({navigation}) {
           source={require('../assets/KakaoTalk_20230701_060052335.jpg')}/>
       </View>
       <View style={styles.footer}>
-        <MyButton text="Log In" onPress={() => navigation.navigate('LogIn')} />
-        <MyButton text="Sign Up" onPress={() => navigation.navigate('SignUp')} />
+        <MyButton text="Log In" onPress={() => navigation.navigate('로그인')} />
+        <MyButton text="Sign Up" onPress={() => navigation.navigate('회원가입')} />
       </View>
     </View>
   );
