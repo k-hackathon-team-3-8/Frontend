@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import React, {Component} from 'react';
+import React from 'react';
 import { StyleSheet, View, Text,TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import Menu from '../components/Menu';
 
 
@@ -10,11 +9,9 @@ export default function Main({navigation}) {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <View style={styles.header}>
-        <Ionicons style={styles.setting} name="ios-settings-sharp" size={30} color="black" onPress={() => navigation.navigate('설정')} />
-      </View>
+      <View style={styles.header}></View>
       <View style={styles.title}>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Camera')}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('프로필')}>
             <Text style={styles.buttonText}>시작</Text>
         </TouchableOpacity>
       </View>

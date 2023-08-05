@@ -4,14 +4,11 @@ import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function Menu() {
- const handleButtonPress = () => {
-   Alert.alert("페이지 이동!");
- };
 
   return (
     <View style={styles.container}>
       
-        <TouchableOpacity onPress={handleButtonPress}>
+        <TouchableOpacity>
           <View style={styles.btn}>
             <AntDesign name="home" size={25} color="black" />
             <Text style={styles.buttonText}>home</Text>
@@ -19,7 +16,7 @@ export default function Menu() {
         </TouchableOpacity>
       
       
-        <TouchableOpacity onPress={handleButtonPress}>
+        <TouchableOpacity>
           <View style={styles.btn}>
             <Ionicons name="md-person-outline" size={25} color="black" />
             <Text style={styles.buttonText}>profile</Text>

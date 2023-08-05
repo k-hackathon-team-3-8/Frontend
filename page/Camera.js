@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import { StyleSheet, View, Text,TouchableOpacity } from 'react-native';
 
 
-export default function Main() {
+export default function Camera({navigation}) {
 
   return (
     <View style={styles.container}>
@@ -12,7 +12,7 @@ export default function Main() {
 
       </View>
       <View style={styles.footer}>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
             <Text style={styles.buttonText}>종료</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>

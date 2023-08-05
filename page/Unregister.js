@@ -22,7 +22,15 @@ const [unregister, setUnregister] = useState(false);
                 title="탈퇴 시 주의사항을 모두 확인 했습니다."
                 isChecked={unregister}
             />
-            <MyButton text="확인" onPress={() => navigation.navigate('First')} />
+            <MyButton
+              text="확인"
+              onPress={() => {
+                if (unregister) {
+                  navigation.navigate('First');
+                }
+              }}
+              disabled={!unregister}
+            />
         </View>
       </View>
     </View>
