@@ -6,7 +6,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import Slider from '@react-native-community/slider';
 import { Ionicons } from '@expo/vector-icons';
 import Modal from 'react-native-simple-modal';
-import CustomSwitch from '../components/SwitchComponent';
+import CustomSwitch from '../../components/SwitchComponent';
 
 export default function Setting({navigation}) {
   const [open, setOpen] = useState(false);

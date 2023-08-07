@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { StyleSheet, View, Text} from 'react-native';
-import MyButton from '../components/MyButton';
-import CheckBox from "../components/CheckBox";
+import MyButton from '../../components/MyButton';
+import CheckBox from "../../components/CheckBox";
 
 
 export default function Unregister({navigation}) {

@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, View, Text,TouchableOpacity } from 'react-native';
-import Menu from '../components/Menu';
+import Menu from '../../components/Menu';
 
 
 export default function Main({navigation}) {

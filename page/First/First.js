@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {Component} from 'react';
 import { StyleSheet, View, Image} from 'react-native';
-import MyButton from '../components/MyButton';
+import MyButton from '../../components/MyButton';
 
 export default function First({navigation}) {
 
@@ -12,11 +12,11 @@ export default function First({navigation}) {
       <View style={styles.title}>
         <Image
           style={{height:'80%',width:'30%',resizeMode:'contain'}}
-          source={require('../assets/KakaoTalk_20230701_060052335.jpg')}/>
+          source={require('../../assets/KakaoTalk_20230701_060052335.jpg')}/>
       </View>
       <View style={styles.footer}>
-        <MyButton text="Log In" onPress={() => navigation.navigate('로그인')} />
-        <MyButton text="Sign Up" onPress={() => navigation.navigate('회원가입')} />
+        <MyButton text="로그인" onPress={() => navigation.navigate('로그인')} />
+        <MyButton text="회원가입" onPress={() => navigation.navigate('회원가입')} />
       </View>
     </View>
   );

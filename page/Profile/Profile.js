@@ -4,7 +4,7 @@ import { StyleSheet, View, Text,TouchableOpacity, Image} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import Menu from '../components/Menu';
+import Menu from '../../components/Menu';
 
 export default function Profile({navigation}) {
 
@@ -20,7 +20,7 @@ export default function Profile({navigation}) {
         <View style={styles.img}>
           <Image
             style={{height:'90%',width:'90%', borderRadius: '100%'}}
-            source={require('../assets/profile.jpg')}/>
+            source={require('../../assets/profile.jpg')}/>
         </View>
         <TouchableOpacity style={styles.name} onPress={() => navigation.navigate('프로필 수정')}>
           <Text style={styles.nameText}>leedaeun</Text>
@@ -30,12 +30,12 @@ export default function Profile({navigation}) {
 
       <View style={styles.menu}>
        
-        <TouchableOpacity style={styles.history}>
+        <TouchableOpacity style={styles.history} onPress={() => navigation.navigate('알람 기록')}>
           <Text style={styles.menuText}>알람 기록</Text>
           <AntDesign name="right" size={24} color="black" />
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.alarm}>
+        <TouchableOpacity style={styles.alarm} onPress={() => navigation.navigate('My 알람')}>
           <Text style={styles.menuText}>My 알람</Text>
           <AntDesign name="right" size={24} color="black" />
         </TouchableOpacity>

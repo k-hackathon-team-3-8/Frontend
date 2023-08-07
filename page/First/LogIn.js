@@ -1,21 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {Component} from 'react';
-import { StyleSheet, View, Text, TextInput } from 'react-native';
-import MyButton from '../components/MyButton';
+import { StyleSheet, View, Text, TextInput} from 'react-native';
+import MyButton from '../../components/MyButton';
 
-export default function SignUp({navigation}) {
-    
+
+export default function LogIn({navigation}) {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.title}>
         <View style={styles.form}>
-          <TextInput style={styles.textForm} placeholder={'Name'} />
           <TextInput style={styles.textForm} placeholder={'Id'} />
           <TextInput style={styles.textForm} placeholder={'Password'} />
         </View>
         <View style={styles.btn}>
-          <MyButton text="Sign Up" onPress={() => navigation.navigate('로그인')} />
+          <MyButton text="로그인" onPress={() => navigation.navigate('Home')} />
+          <Text style={styles.btnText}>Forgot your password?</Text>
         </View>
       </View>
     </View>

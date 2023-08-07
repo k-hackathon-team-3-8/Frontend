@@ -1,14 +1,17 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import First from '../page/First';
-import LogIn from '../page/LogIn';
-import SignUp from '../page/SignUp';
-import Main from '../page/Main';
-import Setting from '../page/Setting';
-import Camera from '../page/Camera';
-import Unregister from '../page/Unregister';
-import Profile from "../page/Profile"
-import Change from '../page/Change';
+import First from '../page/First/First';
+import LogIn from '../page/First/LogIn';
+import SignUp from '../page/First/SignUp';
+import Main from '../page/First/Main';
+import Setting from '../page/Setting/Setting';
+import Camera from '../page/Camera/Camera';
+import Unregister from '../page/Setting/Unregister';
+import Profile from "../page/Profile/Profile"
+import Change from '../page/Profile/Change';
+import History from '../page/Profile/History';
+import Alarm from '../page/Profile/Alarm';
+import SubAlarm from '../page/Profile/SubAlarm';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons';
@@ -41,9 +44,45 @@ const StackNavigation = () => {
               headerTintColor: '#000',
               headerRight: () => (
                 <View>
-                  <Ionicons name="ios-settings-sharp" size={30} color="black"/>
+                  <Ionicons name="ios-settings-sharp"size={30} color="black"/>
                 </View>
               ),
+            }}/>
+            <Stack.Screen 
+              name="알람 기록"
+              component={History}
+              options={{
+                headerBackTitleVisible: false,
+                headerTintColor: '#000',
+                headerRight: () => (
+                  <View>
+                    <Ionicons name="ios-settings-sharp"size={30} color="black"/>
+                  </View>
+                ),
+            }}/>
+            <Stack.Screen 
+              name="My 알람"
+              component={Alarm}
+              options={{
+                headerBackTitleVisible: false,
+                headerTintColor: '#000',
+                headerRight: () => (
+                  <View>
+                    <Ionicons name="ios-settings-sharp"size={30} color="black"/>
+                  </View>
+                ),
+            }}/>
+            <Stack.Screen 
+              name="알람 추가"
+              component={SubAlarm}
+              options={{
+                headerBackTitleVisible: false,
+                headerTintColor: '#000',
+                headerRight: () => (
+                  <View>
+                    <Ionicons name="ios-settings-sharp"size={30} color="black"/>
+                  </View>
+                ),
             }}/>
         </Stack.Navigator>
       </NavigationContainer>
