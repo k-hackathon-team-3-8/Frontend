@@ -11,10 +11,8 @@ import Profile from "../page/Profile/Profile"
 import Change from '../page/Profile/Change';
 import History from '../page/Profile/History';
 import Alarm from '../page/Profile/Alarm';
-import SubAlarm from '../page/Profile/SubAlarm';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import { Ionicons } from '@expo/vector-icons';
 
 
 
@@ -36,54 +34,9 @@ const StackNavigation = () => {
           <Stack.Screen name="설정"component={Setting} options={{headerBackTitleVisible: false, headerTintColor: '#000',}}/>
           <Stack.Screen name="회원탈퇴"component={Unregister} options={{headerBackTitleVisible: false, headerTintColor: '#000',}}/>
           <Stack.Screen name="프로필" component={Profile} options={{headerShown: false}}/>
-          <Stack.Screen 
-            name="프로필 수정"
-            component={Change}
-            options={{
-              headerBackTitleVisible: false,
-              headerTintColor: '#000',
-              headerRight: () => (
-                <View>
-                  <Ionicons name="ios-settings-sharp"size={30} color="black"/>
-                </View>
-              ),
-            }}/>
-            <Stack.Screen 
-              name="알람 기록"
-              component={History}
-              options={{
-                headerBackTitleVisible: false,
-                headerTintColor: '#000',
-                headerRight: () => (
-                  <View>
-                    <Ionicons name="ios-settings-sharp"size={30} color="black"/>
-                  </View>
-                ),
-            }}/>
-            <Stack.Screen 
-              name="My 알람"
-              component={Alarm}
-              options={{
-                headerBackTitleVisible: false,
-                headerTintColor: '#000',
-                headerRight: () => (
-                  <View>
-                    <Ionicons name="ios-settings-sharp"size={30} color="black"/>
-                  </View>
-                ),
-            }}/>
-            <Stack.Screen 
-              name="알람 추가"
-              component={SubAlarm}
-              options={{
-                headerBackTitleVisible: false,
-                headerTintColor: '#000',
-                headerRight: () => (
-                  <View>
-                    <Ionicons name="ios-settings-sharp"size={30} color="black"/>
-                  </View>
-                ),
-            }}/>
+          <Stack.Screen name="프로필 수정" component={Change}options={{headerBackTitleVisible: false,headerTintColor: '#000'}}/>
+          <Stack.Screen name="알람 기록" component={History} options={{headerBackTitleVisible: false,headerTintColor: '#000'}}/>
+          <Stack.Screen name="My 알람" component={Alarm} options={{ headerBackTitleVisible: false, headerTintColor: '#000'}}/>
         </Stack.Navigator>
       </NavigationContainer>
     );

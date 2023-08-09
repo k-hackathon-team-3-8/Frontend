@@ -60,7 +60,7 @@ export default function Alarm ({navigation}) {
 
       </View>
       <View style={styles.footer}>
-        <MyButton text="알람 추가" onPress={() => navigation.navigate('알람 추가')}/>
+        <MyButton text="확인" onPress={() => navigation.navigate('프로필')}/>
       </View>
     </View>
   );
