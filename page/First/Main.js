@@ -11,7 +11,7 @@ export default function Main({navigation}) {
       <StatusBar style="auto" />
       <View style={styles.header}></View>
       <View style={styles.title}>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('프로필')}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('카메라')}>
             <Text style={styles.buttonText}>시작</Text>
         </TouchableOpacity>
       </View>
