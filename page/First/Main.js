@@ -11,12 +11,12 @@ export default function Main({navigation}) {
       <StatusBar style="auto" />
       <View style={styles.header}></View>
       <View style={styles.title}>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('카메라')}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Camera')}>
             <Text style={styles.buttonText}>시작</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.footer}>
-        <Menu/>
+        <Menu navigation={navigation}/>
       </View>
     </View>
   );

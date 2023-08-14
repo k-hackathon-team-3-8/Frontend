@@ -42,7 +42,7 @@ export default function Profile({navigation}) {
       </View>
 
       <View style={styles.footer}>
-        <Menu/>
+        <Menu navigation={navigation}/>
       </View>
 
     </View>
