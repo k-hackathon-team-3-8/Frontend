@@ -2,7 +2,7 @@ import React from 'react';
 import First from '../page/First/First';
 import LogIn from '../page/First/LogIn';
 import SignUp from '../page/First/SignUp';
-import Camera from '../page/Camera/Camera';
+import CameraPage from '../page/Camera/CamerPage';
 import Profile from "../page/Profile/Profile"
 import Change from '../page/Profile/Change';
 import History from '../page/Profile/History';
@@ -29,7 +29,7 @@ const StackNavigation = () => {
           <Stack.Screen name="로그인"component={LogIn} options={{headerBackTitleVisible: false, headerTintColor: '#000',}}/>
           <Stack.Screen name="회원가입"component={SignUp} options={{headerBackTitleVisible: false, headerTintColor: '#000',}}/>
           <Stack.Screen name="Home"component={Main} options={{headerShown: false}}/>
-          <Stack.Screen name="Camera"component={Camera} options={{headerShown: false}}/>
+          <Stack.Screen name="Camera"component={CameraPage} options={{headerShown: false}}/>
           <Stack.Screen name="프로필" component={Profile} options={{headerShown: false}}/>
           <Stack.Screen name="프로필 수정" component={Change}options={{headerBackTitleVisible: false,headerTintColor: '#000'}}/>
           <Stack.Screen name="알람 기록" component={History} options={{headerBackTitleVisible: false,headerTintColor: '#000'}}/>

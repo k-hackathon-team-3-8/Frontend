@@ -1,15 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import React, {Component} from 'react';
+import React from 'react';
 import { StyleSheet, View, Text,TouchableOpacity } from 'react-native';
+import  CameraSample from './CameraSample';
 
-
-export default function Camera({navigation}) {
-
+export default function CamerPage({navigation}) {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.title}>
-
+        <CameraSample/>
       </View>
       <View style={styles.footer}>
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
