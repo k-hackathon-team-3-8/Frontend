@@ -1,21 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text,TouchableOpacity } from 'react-native';
-import  CameraSample from './CameraSample';
+import { Camera } from 'expo-camera';
 
-export default function CamerPage({navigation}) {
+export default function CameraPage({ navigation }) {
+  const [hasPermission, setHasPermission] = useState(null);
+  const [cameraType, setCameraType] = useState(Camera.Constants.Type.front);
+
+  useEffect(() => {
+    (async () => {
+      const { status } = await Camera.requestCameraPermissionsAsync();
+      setHasPermission(status === 'granted');
+    })();
+  }, []);
+
+  if (hasPermission === null) {
+    return <View />;
+  }
+  if (hasPermission === false) {
+    return <Text>No access to camera</Text>;
+  }
+
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
       <View style={styles.title}>
-        <CameraSample/>
+        <Camera style={{ flex: 1 }} type={cameraType}/>
       </View>
       <View style={styles.footer}>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
-            <Text style={styles.buttonText}>종료</Text>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
+          <Text style={styles.buttonText}>종료</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>작게</Text>
+          <Text style={styles.buttonText}>작게</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -27,12 +42,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    flex: 7,
-    alignItems:"center",
-    justifyContent: "center",
+    flex: 9,
   },
   footer: {
-    flex: 2,
+    flex: 1.5,
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
@@ -42,7 +55,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     width: '40%',
-    height: '35%',
+    height: '50%',
     borderRadius: "100%",
   },
   buttonText: {

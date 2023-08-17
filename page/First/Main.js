@@ -5,7 +5,7 @@ import Menu from '../../components/Menu';
 
 
 export default function Main({navigation}) {
-
+  
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
